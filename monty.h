@@ -35,4 +35,45 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+#define INSTRUCTIONS { \
+		{"push", push},\
+		{"pall", pall},\
+		{"pint", pint},\
+		{"pop", pop},\
+		{"swap", swap},\
+		{"add", _add},\
+		{"nop", nop},\
+		{NULL, NULL} \
+		}
+/**
+*struct help - for opcode
+*@data_struct: mode of stack
+*@argument: argument of structure
+*Description: structure to pass data
+*/
+typedef struct help
+{
+	int data_struct;
+	char *argument;
+} help;
+
+extern help global;
+extern int status;
+void push(stack_t **stack, unsigned int line_count);
+void pall(stack_t **stack, unsigned int line_count);
+void pint(stack_t **stack, unsigned int line_count);
+void pop(stack_t **stack, unsigned int line_count);
+void swap(stack_t **stack, unsigned int line_count);
+void _add(stack_t **stack, unsigned int line_count);
+void nop(stack_t **stack, unsigned int line_count);
+
+int is_digit(char *str);
+int isnumber(char *str);
+
+stack_t *add_node(stack_t **stack, const int n);
+stack_t *queue_node(stack_t **stack, const int n);
+void free_stack(stack_t *stack);
+size_t print_stack(const stack_t *stack);
+void opcode(stack_t **stack, char *str, unsigned int line_cnt);
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 #endif

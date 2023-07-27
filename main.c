@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "monty.h"
+help global;
+int status = 0;
 /**
  *error_use - print error use msg
  *Return: nothing
@@ -29,8 +31,6 @@ void error_file(char *argv)
 */
 int main(int argc, char **argv)
 {
-	int status = 0;
-	help global;
 	FILE *file;
 	size_t buf_len = 0;
 	char *buffer = NULL, *str = NULL;

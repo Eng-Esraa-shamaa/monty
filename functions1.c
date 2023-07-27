@@ -19,8 +19,3 @@ int is_digit(char *str)
 	}
 	return (1);
 }
-/**
- *isnumber - checks if it is a number
- *@str: the string
- *Return: 1 or 0.
-*/

@@ -6,13 +6,12 @@
 */
 size_t _print_stack(const stack_t *stack)
 {
-size_t i = 0;
+size_t i;
 
-while (stack != NULL)
+for (i = 0; stack != NULL; i++)
 {
 printf("%d\n", stack->n);
 stack = stack->next;
-i++;
 }
 return (i);
 }

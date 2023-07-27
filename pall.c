@@ -7,5 +7,5 @@
 */
 void pall(stack_t **stack, unsigned int line_count __attribute__((unused)))
 {
-	print_stack(*stack);
+	_print_stack(*stack);
 }

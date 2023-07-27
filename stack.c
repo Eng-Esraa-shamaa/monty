@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
- *print_stack - prints the contents of a stack_t stack
+ *_print_stack - prints the contents of a stack_t stack
  *@stack: stack
  *Return: number of elements in list
 */
-size_t print_stack(const stack_t *stack)
+size_t _print_stack(const stack_t *stack)
 {
 size_t i = 0;
 
@@ -17,11 +17,11 @@ i++;
 return (i);
 }
 /**
- *free_stack - frees a linked list
+ *_free_stack - frees a linked list
  *@stack: list head
  *Return: nothing
  */
-void free_stack(stack_t *stack)
+void _free_stack(stack_t *stack)
 {
 	stack_t *current_list = stack;
 	stack_t *next;

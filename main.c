@@ -43,27 +43,27 @@ int main(int argc, char **argv)
 	file = fopen(argv[1], "r");
 	if (!file)
 		error_file(argv[1]);
-while (getline(&buffer, &buf_len, file) != -1)
-{
-if (status)
-break;
-if (*buffer == '\n')
-{
-line_count++;
-continue;
-}
-str = strtok(buffer, " \t\n");
-if ((str == NULL) || (*str == '#'))
-{
-line_count++;
-continue;
-}
-global.argument = strtok(NULL, " \t\n");
-opcode(&stack, str, line_count);
-line_count++;
-}
-free(buffer);
-free_stack(stack);
-fclose(file);
-exit(status);
+	while (getline(&buffer, &buf_len, file) != -1)
+	{
+		if (status)
+		break;
+		if (*buffer == '\n')
+		{
+			line_count++;
+			continue;
+		}
+		str = strtok(buffer, " \t\n");
+		if ((str == NULL) || (*str == '#'))
+		{
+			line_count++;
+			continue;
+		}
+		global.argument = strtok(NULL, " \t\n");
+		opcode(&stack, str, line_count);
+		line_count++;
+	}
+	free(buffer);
+	free_stack(stack);
+	fclose(file);
+	exit(status);
 }

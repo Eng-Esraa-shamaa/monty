@@ -24,7 +24,7 @@ int is_digit(char *str)
  *@str: the string
  *Return: 1 or 0.
 */
-int isnumber(char *str)
+/*int isnumber(char *str)
 {
 	int j;
 
@@ -34,4 +34,4 @@ int isnumber(char *str)
 		if (j < '0' || j > '9')
 			return (0);
 	return (1);
-}
+}*/

@@ -10,8 +10,8 @@ int status = 0;
 int main(int argc, char **argv)
 {
 	FILE *file;
-	size_t buf_len = 0;
-	char *buffer = NULL, *str = NULL;
+	size_t buffer_length = 0;
+	char *buff = NULL, *str = NULL;
 	stack_t *stack = NULL;
 	unsigned int line_count = 1;
 
@@ -21,16 +21,16 @@ int main(int argc, char **argv)
 	file = fopen(argv[1], "r");
 	if (!file)
 		error_file(argv[1]);
-	while (getline(&buffer, &buf_len, file) != -1)
+	while (getline(&buff, &buffer_length, file) != -1)
 	{
 		if (status)
 		break;
-		if (*buffer == '\n')
+		if (*buff == '\n')
 		{
 			line_count++;
 			continue;
 		}
-		str = strtok(buffer, " \t\n");
+		str = strtok(buff, " \t\n");
 		if ((str == NULL) || (*str == '#'))
 		{
 			line_count++;
@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 		opcode(&stack, str, line_count);
 		line_count++;
 	}
-	free(buffer);
+	free(buff);
 	_free_stack(stack);
 	fclose(file);
 	exit(status);

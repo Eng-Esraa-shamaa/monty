@@ -25,7 +25,7 @@ void _free_stack(stack_t *stack)
 	stack_t *current_list = stack;
 	stack_t *next;
 
-	if (stack)
+	if (stack != NULL)
 	{
 		next = stack->next;
 		while (current_list != NULL)

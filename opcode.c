@@ -10,7 +10,7 @@ void opcode(stack_t **stack, char *str, unsigned int line_count)
 {
 	int i = 0;
 
-	instruction_t op[] = INSTRUCTIONS;
+	instruction_t op[] = OPERATIONS;
 
 	if (!strcmp(str, "stack"))
 	{

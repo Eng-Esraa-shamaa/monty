@@ -35,7 +35,7 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-#define INSTRUCTIONS { \
+#define OPERATIONS { \
 		{"push", push},\
 		{"pall", pall},\
 		{"pint", pint},\
@@ -68,9 +68,7 @@ void pop(stack_t **stack, unsigned int line_count);
 void swap(stack_t **stack, unsigned int line_count);
 void _add(stack_t **stack, unsigned int line_count);
 void nop(stack_t **stack, unsigned int line_count);
-
 int is_digit(char *str);
-
 stack_t *add_node(stack_t **stack, const int n);
 stack_t *queue_node(stack_t **stack, const int n);
 void _free_stack(stack_t *stack);

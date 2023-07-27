@@ -8,7 +8,7 @@
 */
 void opcode(stack_t **stack, char *str, unsigned int line_count)
 {
-	int i = 0;
+	int j = 0;
 
 	instruction_t op[] = OPERATIONS;
 
@@ -22,14 +22,14 @@ void opcode(stack_t **stack, char *str, unsigned int line_count)
 		global.data_struct = 0;
 		return;
 	}
-	while (op[i].opcode)
+	while (op[j].opcode)
 	{
-		if (strcmp(op[i].opcode, str) == 0)
+		if (strcmp(op[j].opcode, str) == 0)
 		{
-			op[i].f(stack, line_count);
+			op[j].f(stack, line_count);
 			return;
 		}
-		i++;
+		j++;
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_count, str);
 	status = EXIT_FAILURE;

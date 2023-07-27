@@ -68,7 +68,6 @@ void _add(stack_t **stack, unsigned int line_count);
 void nop(stack_t **stack, unsigned int line_count);
 
 int is_digit(char *str);
-int isnumber(char *str);
 
 stack_t *add_node(stack_t **stack, const int n);
 stack_t *queue_node(stack_t **stack, const int n);

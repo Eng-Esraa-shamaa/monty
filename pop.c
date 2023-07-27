@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include <string.h>
 #include "monty.h"
 /**
 *pop - pops from stack
@@ -23,6 +19,8 @@ void pop(stack_t **stack, unsigned int line_count)
 	free(*stack);
 	*stack = temp;
 	if (*stack == NULL)
+	{
 		return;
+	}
 	(*stack)->prev = NULL;
 }

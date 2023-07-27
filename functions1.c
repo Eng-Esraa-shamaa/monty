@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include "monty.h"
 /**
  *is_digit - checks if it is digit

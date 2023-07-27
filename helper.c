@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "monty.h"
 /**
  *queue_node - new node to a stack in queue

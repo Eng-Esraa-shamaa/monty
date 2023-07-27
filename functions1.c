@@ -24,14 +24,3 @@ int is_digit(char *str)
  *@str: the string
  *Return: 1 or 0.
 */
-/*int isnumber(char *str)
-{
-	int j;
-
-	if (!str)
-		return (0);
-	for (j = 0; str[j]; j++)
-		if (j < '0' || j > '9')
-			return (0);
-	return (1);
-}*/

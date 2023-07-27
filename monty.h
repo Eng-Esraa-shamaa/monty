@@ -73,6 +73,6 @@ stack_t *add_node(stack_t **stack, const int n);
 stack_t *queue_node(stack_t **stack, const int n);
 void _free_stack(stack_t *stack);
 size_t _print_stack(const stack_t *stack);
-void opcode(stack_t **stack, char *str, unsigned int line_cnt);
+void opcode(stack_t **stack, char *str, unsigned int line_count);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 #endif

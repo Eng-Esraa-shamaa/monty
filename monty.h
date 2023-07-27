@@ -59,6 +59,8 @@ typedef struct help
 
 extern help global;
 extern int status;
+void error_file(char *argv);
+void error_use(void);
 void push(stack_t **stack, unsigned int line_count);
 void pall(stack_t **stack, unsigned int line_count);
 void pint(stack_t **stack, unsigned int line_count);
